@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "json-as-xlsx": "^2.5.6",
+    "lodash": "^4.17.21",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/lodash": "^4.14.202",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.3"
+  },
+  "name": "tudf",
+  "description": "",
+  "version": "1.0.0",
+  "main": "dist/tudf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpit-resilient/tudf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpit-resilient/tudf/issues"
+  },
+  "homepage": "https://github.com/arpit-resilient/tudf#readme"
+}
