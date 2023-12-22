@@ -1,14 +1,13 @@
 {
   "dependencies": {
-    "json-as-xlsx": "^2.5.6",
+    "json-as-xlsx": "^2.5.3",
     "lodash": "^4.17.21",
-    "util": "^0.12.5"
+    "util": "^0.12.4"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
-    "@types/lodash": "^4.14.202",
-    "jest": "^29.7.0",
-    "typescript": "^5.3.3"
+    "@jest/globals": "^29.6.1",
+    "@types/lodash": "^4.14.194",
+    "typescript": "^5.0.4"
   },
   "name": "tudf",
   "description": "",
