@@ -20,13 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arpit-resilient/tudf.git"
+    "url": "git+https://github.com/FintechLadder/TUDF.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arpit-resilient/tudf/issues"
+    "url": "https://github.com/FintechLadder/TUDF.git/issues"
   },
-  "homepage": "https://github.com/arpit-resilient/tudf#readme"
+  "homepage": "https://github.com/FintechLadder/TUDF.git#readme"
 }
