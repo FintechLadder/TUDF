@@ -13,6 +13,7 @@
   "description": "",
   "version": "1.0.0",
   "main": "dist/tudf.js",
+  "typings": "src/tudf.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
