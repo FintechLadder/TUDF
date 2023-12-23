@@ -13,16 +13,16 @@ export class BaseSegmentHandler {
     this.data = data;
   }
 
-  getData() {
+  getSegmentWiseDataList() {
     return [this.data];
   }
 
   toString(): string {
-    const segments: Segment[] = this.getData().map((data) => new Segment(this.spec, data));
+    const segments: Segment[] = this.getSegmentWiseDataList().map((data) => new Segment(this.spec, data));
     return segments.map((segment) => segment.toString()).join("");
   }
 
-  handleStringSplit = (fieldName: string, str: any) => {
+  splitIntoFields = (fieldName: string, str: any) => {
     const maxLength: number | undefined = this.spec.fieldSpecs.find((spec: FieldSpec) => spec.mapKey === `${fieldName}_1`)?.length;
     if (_.isNil(maxLength)) {
       throw new Error(`maxLength can't be undefined for field ${fieldName}_1`);

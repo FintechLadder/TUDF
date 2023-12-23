@@ -1,7 +1,7 @@
 import { BaseSegmentHandler } from "./baseSegmentHandler";
 
 export class IdSegmentHandler extends BaseSegmentHandler {
-  getData() {
+  getSegmentWiseDataList() {
     const newData = [
       {
         id: "I01",

@@ -11,13 +11,13 @@ class NameSegmentHandler extends baseSegmentHandler_1.BaseSegmentHandler {
         const cleanedString = inputString.replace(/[~!#$%^&*=|?+,@/\\]/g, "");
         return cleanedString;
     }
-    getData() {
+    getSegmentWiseDataList() {
         const fieldName = "customer_name";
         if (lodash_1.default.isNil(this.data) || lodash_1.default.isNil(this.data[fieldName])) {
             throw new Error(`Field ${fieldName} is missing`);
         }
         const cleanedStr = this.cleanCustomerName(this.data[fieldName].toString());
-        const splitCustomerName = this.handleStringSplit(fieldName, cleanedStr);
+        const splitCustomerName = this.splitIntoFields(fieldName, cleanedStr);
         const newData = Object.assign(Object.assign({}, this.data), splitCustomerName);
         return [newData];
     }

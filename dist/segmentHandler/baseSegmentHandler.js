@@ -8,7 +8,7 @@ const lodash_1 = __importDefault(require("lodash"));
 const Segment_1 = __importDefault(require("../libs/Segment"));
 class BaseSegmentHandler {
     constructor(spec, data) {
-        this.handleStringSplit = (fieldName, str) => {
+        this.splitIntoFields = (fieldName, str) => {
             var _a;
             const maxLength = (_a = this.spec.fieldSpecs.find((spec) => spec.mapKey === `${fieldName}_1`)) === null || _a === void 0 ? void 0 : _a.length;
             if (lodash_1.default.isNil(maxLength)) {
@@ -42,11 +42,11 @@ class BaseSegmentHandler {
         this.spec = spec;
         this.data = data;
     }
-    getData() {
+    getSegmentWiseDataList() {
         return [this.data];
     }
     toString() {
-        const segments = this.getData().map((data) => new Segment_1.default(this.spec, data));
+        const segments = this.getSegmentWiseDataList().map((data) => new Segment_1.default(this.spec, data));
         return segments.map((segment) => segment.toString()).join("");
     }
 }

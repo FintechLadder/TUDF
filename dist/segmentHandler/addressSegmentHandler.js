@@ -11,13 +11,13 @@ class AddressSegmentHandler extends baseSegmentHandler_1.BaseSegmentHandler {
         const cleanedString = inputString.replace(/[:-]/g, "");
         return cleanedString;
     }
-    getData() {
+    getSegmentWiseDataList() {
         const fieldName = "address_1";
         if (lodash_1.default.isNil(this.data) || lodash_1.default.isNil(this.data[fieldName])) {
             throw new Error(`Field ${fieldName} is missing`);
         }
         const cleanedStr = this.cleanAddress(this.data[fieldName].toString());
-        const splitAddress = this.handleStringSplit(fieldName, cleanedStr);
+        const splitAddress = this.splitIntoFields(fieldName, cleanedStr);
         const newData = Object.assign(Object.assign({}, this.data), splitAddress);
         return [newData];
     }

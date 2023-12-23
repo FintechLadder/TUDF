@@ -18,40 +18,6 @@ class Segment {
         this.lengthType = spec.lengthType;
         this.data = data;
     }
-    // not in use
-    getSemicolonSeparatedHeader() {
-        return this.fieldSpecs
-            .map((fieldSpec) => {
-            if (!fieldSpec.name) {
-                throw new Error(`Missing field name, fieldSpec = ${util_1.default.inspect(fieldSpec)}`);
-            }
-            return fieldSpec.name;
-        })
-            .reduce((headers, fieldName) => `${headers};${fieldName}`);
-    }
-    // not in use
-    toSemicolonSeparatedString() {
-        return this.fieldSpecs
-            .map((fieldSpec) => {
-            let mappedVal;
-            // If fieldSpec has val property use it first
-            if ((0, utils_1.isValueAvailable)(fieldSpec.val)) {
-                mappedVal = fieldSpec.val;
-            }
-            else {
-                if (!fieldSpec.mapKey) {
-                    throw new Error(`mapKey is missing from fieldSpec ${util_1.default.inspect(fieldSpec)}`);
-                }
-                mappedVal = this.data[fieldSpec.mapKey];
-                if (fieldSpec.mapFunc) {
-                    mappedVal = fieldSpec.mapFunc(mappedVal);
-                }
-            }
-            const field = new Field_1.default(fieldSpec, mappedVal, fieldSpec.defaultVal);
-            return field.toString("fixed");
-        })
-            .reduce((result, fieldStr) => `${result};${fieldStr}`);
-    }
     toString() {
         return this.fieldSpecs
             .map((fieldSpec) => {

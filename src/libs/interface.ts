@@ -30,7 +30,3 @@ export interface SegmentSpec {
   lengthType: LengthType;
   fieldSpecs: Array<FieldSpec>;
 }
-
-export interface TuefSpec {
-  [key: string]: SegmentSpec;
-}

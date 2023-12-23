@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.IdSegmentHandler = void 0;
 const baseSegmentHandler_1 = require("./baseSegmentHandler");
 class IdSegmentHandler extends baseSegmentHandler_1.BaseSegmentHandler {
-    getData() {
+    getSegmentWiseDataList() {
         const newData = [
             {
                 id: "I01",
